@@ -1,0 +1,215 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap");
+
+.whisper-page {
+  --ink: #14121a;
+  --ink-panel: #1d1a27;
+  --ink-line: rgba(201, 162, 39, 0.22);
+  --gold: #c9a227;
+  --gold-dim: #8a721c;
+  --paper: #f3ede0;
+  --paper-ink: #2a2418;
+  --text-main: #e9e4d8;
+  --text-muted: #948d9e;
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(201, 162, 39, 0.09), transparent 55%),
+    var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.whisper-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: var(--ink-panel);
+  border: 1px solid var(--ink-line);
+  border-radius: 4px;
+  padding: 40px 32px 32px;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.whisper-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(
+    to bottom,
+    rgba(201, 162, 39, 0.06),
+    transparent
+  );
+  clip-path: polygon(0 0, 50% 62%, 100% 0);
+  pointer-events: none;
+}
+
+.postmark {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: var(--gold-dim);
+  transform: rotate(8deg);
+  opacity: 0.85;
+}
+
+.postmark-label {
+  font-family: "Inter", sans-serif;
+  font-size: 5.5px;
+  letter-spacing: 0.08em;
+  fill: currentColor;
+}
+
+.postmark-region {
+  font-family: "Fraunces", serif;
+  font-size: 8px;
+  fill: currentColor;
+}
+
+.whisper-heading {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--text-main);
+  margin: 4px 0 10px;
+  max-width: 22ch;
+}
+
+.whisper-subtext {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  max-width: 34ch;
+}
+
+.paper-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.paper-input {
+  width: 100%;
+  background: var(--paper);
+  color: var(--paper-ink);
+  border: none;
+  border-radius: 2px;
+  padding: 16px 16px 22px;
+  font-family: "Fraunces", serif;
+  font-size: 15.5px;
+  line-height: 26px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 25px,
+    rgba(42, 36, 24, 0.1) 26px
+  );
+  resize: none;
+  box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.55);
+}
+
+.paper-input:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.paper-input::placeholder {
+  color: rgba(42, 36, 24, 0.45);
+}
+
+.paper-input:disabled {
+  opacity: 0.7;
+}
+
+.char-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 11.5px;
+  color: rgba(42, 36, 24, 0.5);
+  font-family: "Inter", sans-serif;
+}
+
+.char-count-low {
+  color: #a13f2e;
+}
+
+.whisper-alert {
+  font-size: 13.5px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.seal-button {
+  width: 100%;
+  background: var(--gold);
+  border: none;
+  color: #1d1706;
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: 0.01em;
+  padding: 12px 0;
+  border-radius: 2px;
+  transition: transform 0.12s ease;
+}
+
+.seal-button:hover,
+.seal-button:focus {
+  background: #d8b23a;
+  color: #1d1706;
+}
+
+.seal-button:active {
+  transform: scale(0.98);
+}
+
+.seal-button:disabled {
+  background: var(--gold-dim);
+  opacity: 0.8;
+}
+
+.whisper-sent {
+  text-align: left;
+  padding-top: 8px;
+}
+
+.seal-icon {
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.whisper-again-link {
+  padding: 0;
+  color: var(--gold);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.whisper-again-link:hover,
+.whisper-again-link:focus {
+  color: #d8b23a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seal-button {
+    transition: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .whisper-card {
+    padding: 32px 22px 26px;
+  }
+
+  .whisper-heading {
+    font-size: 24px;
+  }
+} */

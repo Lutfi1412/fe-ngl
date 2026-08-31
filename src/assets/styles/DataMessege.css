@@ -1,0 +1,112 @@
+.inbox-page {
+  --ink: #14121a;
+  --ink-panel: #1d1a27;
+  --ink-line: rgba(201, 162, 39, 0.22);
+  --gold: #c9a227;
+  --gold-dim: #8a721c;
+  --paper: #f3ede0;
+  --paper-ink: #2a2418;
+  --text-main: #e9e4d8;
+  --text-muted: #948d9e;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 48px 20px 64px;
+  background: radial-gradient(
+      ellipse at 50% -10%,
+      rgba(201, 162, 39, 0.08),
+      transparent 55%
+    ),
+    var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.inbox-header {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  border-bottom: 1px solid var(--ink-line);
+  padding-bottom: 20px;
+}
+
+.inbox-heading {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.inbox-subtext {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.inbox-state {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 24px 0;
+}
+
+.inbox-state-error {
+  color: #d98a7a;
+}
+
+.note-list {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.note-card {
+  position: relative;
+  background: var(--paper);
+  color: var(--paper-ink);
+  border-radius: 2px;
+  padding: 18px 20px 16px;
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+.note-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: var(--ink-panel);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.note-text {
+  font-family: "Fraunces", serif;
+  font-size: 15.5px;
+  margin: 0 0 1px;
+  border-top: 1px dashed rgba(42, 36, 24, 0.25);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.note-region {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: rgba(42, 36, 24, 0.55);
+  padding-top: 8px;
+  width: 100%;
+  margin-bottom: 10px; /* GAP antara region dan pesan */
+}
+
+@media (max-width: 480px) {
+  .inbox-heading {
+    font-size: 22px;
+  }
+}
